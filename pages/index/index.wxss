@@ -1,0 +1,217 @@
+/*********************************************************************base样式********************************************************/
+body {
+	font-family:"微软雅黑";
+}
+a:hover{
+	text-decoration:none;
+}
+a {
+  color: currentColor;
+}
+.text-center{
+	text-align:center;
+}
+.text-left{
+	text-align:left;
+}
+.text-right{
+	text-align:right;
+}
+.nopadding{
+	padding: 0px !important;
+}
+.block{
+	  display: block;
+  height: 100%;
+  width: 100%;
+}
+.none{
+	display: none;
+}
+
+.nopadding_right{
+	padding-right:0px !important;
+}
+a {
+  outline-style: none;
+  text-decoration: none;
+}
+.pointer{
+	cursor:pointer;
+}
+.opacity0{
+	 filter:alpha(opacity=0);
+ -moz-opacity:0;
+ -khtml-opacity: 0;
+ opacity: 0;
+}
+.clearfix{ 
+	content: ".";  
+	display: block;
+	clear: both;	
+	float: none !important;
+}
+.text-overflow{  
+	display:block;
+	white-space:nowrap; 
+	overflow:hidden; 
+	text-overflow:ellipsis;
+}
+.text-indent{
+	text-indent:2em;
+}
+.no-style{
+	background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    border: medium none;
+}
+.floatL{
+    float:left;
+    font-size: 40px;
+    /*font-size-adjust:inherit;*/
+    width: 100px;
+    /*height: 100%;*/
+}
+.floatR{
+    float:right;
+}
+body .padding-left-no{
+	padding-left:0px;
+}
+body{
+    margin:0;
+    padding:0;
+}
+/*字体图标*/
+@font-face {
+  font-family: 'iconfont';  /* project id 264833 */
+  src: url('//at.alicdn.com/t/font_ofa02rx7gjfqd7vi.eot');
+  src: url('//at.alicdn.com/t/font_ofa02rx7gjfqd7vi.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_ofa02rx7gjfqd7vi.woff') format('woff'),
+  url('//at.alicdn.com/t/font_ofa02rx7gjfqd7vi.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_ofa02rx7gjfqd7vi.svg#iconfont') format('svg');
+}
+.iconfont {
+    font-family:"iconfont" !important;
+    font-size:16px;
+    font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/*************************************************************页面样式**************************************************
+*/
+.xy_nav{
+    padding:13px;
+    border-bottom:1px solid #dbdbdb;
+}
+.icon-close{
+    color:#333;
+    line-height:46px;
+    padding:0 10px;
+    font-size:24px;
+}
+.xy_nav span{
+    line-height:46px;
+    font-size:20px;
+    color:#333;
+    border-left:1px solid #999;
+    padding:0 10px;
+}
+.xy-body{
+    padding:25px;
+}
+.xy_time{
+    width:270px;
+    margin:0 auto;
+    border:1px solid #CBCBCB;
+    padding:20px;
+    
+    margin-bottom:15px;
+}
+.xy_time p{
+    text-align: left;
+    font-size:24px;
+    
+}
+.xy_time span{
+    text-align: right;
+    font-size:17px;
+    display: block;
+    line-height: 30px;
+}
+.xy_event{
+    border:1px solid #CBCBCB;
+    width:310px;
+    height:160px;
+    overflow: hidden;
+    margin:0 auto;
+    display: flex;
+    /*padding-right:20px;*/
+    margin-bottom: 5px;
+}
+
+xy_event ul li{
+	list-style-type: none; 
+  line-height: 17px;
+}
+
+
+.xy_event_left{
+
+width: 20px;
+margin: 20px;
+
+padding: 30px 50px 30px 30px;
+font-size: 40px;
+
+
+}
+
+.red{
+ color: red;
+}
+
+.blue{
+  color: dodgerblue;
+}
+
+.xy_event_right{
+    /*align-self: center;*/
+    width: 250px;
+    padding: 20px;
+}
+.xy_event .xy_event_right p{
+    color:#666;
+    line-height:32px;
+    font-size:16px;
+    text-align: left;
+    text-overflow: -o-ellipsis-lastline;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+.starts{
+    width:270px;
+    margin:0 auto;
+    margin-top:-10px;
+    padding-left: 30px;
+}
+.starts span{
+    font-size:20px;
+    color:#666;
+    float:left;
+    margin-right:10px;
+}
+.starts icon{
+    float:left;
+    margin:0 1px;
+}
+.icon-star{
+    font-size:17px;
+    color:#666;
+    line-height:25px;
+}
+

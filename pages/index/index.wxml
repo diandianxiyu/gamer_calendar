@@ -1,0 +1,41 @@
+<!--index.wxml-->
+    <view class="xy-body">
+        <view class="xy_time">
+            <p>{{date}}</p>
+            <span>{{date_lunar}}</span>
+        </view>
+                <view class="xy_event clearfix">
+                    <view class="xy_event_left red ">宜</view>
+                    <view class="xy_event_right floatR">
+
+                    <ul >
+                    <view wx:for="{{yes_arr}}" wx:key="*this">
+ <li><p>{{item}}</p></li>
+                    </view>
+                  
+                    </ul>
+                           
+                    </view>
+                </view>
+                <view class="xy_event clearfix">
+                    <view class="xy_event_left blue ">忌</view>
+                    <view class="xy_event_right floatR"> 
+                    <ul>
+                    <view wx:for="{{no_arr}}" wx:key="*this">
+ <li><p>{{item}}</p></li>
+                    </view>
+                    </ul>  
+                    </view>
+                </view>
+    </view>
+
+    <view class="starts">
+        <span>运势指数:</span>
+          <view wx:for="{{star_arr}}" wx:key="*this">
+             <icon type="success" size="24"/>
+         </view>
+       
+
+    </view>
+
+ 
