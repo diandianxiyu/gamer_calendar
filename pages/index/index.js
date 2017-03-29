@@ -553,20 +553,44 @@ var koko_data=[
   '抽SSR',
   '地平线天下第一',
   '血源天下第一',
- 
+  'CSGO天下第一',
+  'FF15天下第一',
+  '全境封锁天下第一',
+  '辐射天下第一',
+  'MC天下第一',
+  '战神天下第一',
+  'H1Z1天下第一',
+  '高达天下第一',
+  '马里奥天下第一',
+  '神秘海域天下第一',
 ];
 
 var yes_arr = new Array();
 var no_arr = new Array();
 
- yes_arr.push(koko_data.pop());
-  yes_arr.push(koko_data.pop());
-   yes_arr.push(koko_data.pop());
-  yes_arr.push(koko_data.pop());
-no_arr.push(koko_data.pop());
-no_arr.push(koko_data.pop());
-no_arr.push(koko_data.pop());
-no_arr.push(koko_data.pop());
+//确定周几 
+var week_num = today.getDay();
+
+week_num = 7;
+
+for (var i=0;i<4;i++)
+{
+  var yes_key = week_num + (i * 2);
+  var no_key = yes_key -1;
+ yes_arr.push(koko_data[yes_key]);
+ no_arr.push(koko_data[no_key]);
+}
+
+console.log(week_num);
+
+//  yes_arr.push(koko_data.pop());
+//   yes_arr.push(koko_data.pop());
+//    yes_arr.push(koko_data.pop());
+//   yes_arr.push(koko_data.pop());
+// no_arr.push(koko_data.pop());
+// no_arr.push(koko_data.pop());
+// no_arr.push(koko_data.pop());
+// no_arr.push(koko_data.pop());
 
 //随机星星的数量
 var star =  Math.abs(today.getDay() - 8 );
@@ -579,6 +603,18 @@ star_arr.push("sss");
 console.log(star)
 
 Page({
+  onShareAppMessage: function () {
+    return {
+      title: '玩家老黄历',
+      path: '/pages/index/index',
+      success: function(res) {
+        // 分享成功
+      },
+      fail: function(res) {
+        // 分享失败
+      }
+    }
+  },
   
   data: {
      date: today_str,
@@ -611,6 +647,7 @@ Page({
       })
     })
   }
+  
 })
 
 
