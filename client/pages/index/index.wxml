@@ -5,7 +5,7 @@
             <span>{{date_lunar}}</span>
         </view>
                 <view class="xy_event clearfix">
-                    <view class="xy_event_left red ">宜</view>
+                    <view class="xy_event_left red ">吃</view>
                     <view class="xy_event_right floatR">
 
                     <ul >
@@ -18,7 +18,7 @@
                     </view>
                 </view>
                 <view class="xy_event clearfix">
-                    <view class="xy_event_left blue ">忌</view>
+                    <view class="xy_event_left blue ">玩</view>
                     <view class="xy_event_right floatR"> 
                     <ul>
                     <view wx:for="{{no_arr}}" wx:key="*this">

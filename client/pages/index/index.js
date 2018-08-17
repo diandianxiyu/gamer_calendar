@@ -541,29 +541,43 @@ var lunar = calendar.solar2lunar(today.getFullYear(),month,today.getDate())
 var today_lunar = lunar.gzYear+'年'+lunar.gzMonth+'月'+lunar.gzDay+'日（'+lunar.Animal+'年)';
 
 //做对应的库
-var koko_data=[
-  '敌羞吾去脱她衣',
-  '养沼跃鱼',
-  '传火',
-  '打昆特牌',
-  '塞尔达天下第一',
-  '仁王天下第一',
-  '救碧琪公主',
-  'STEAM买买买',
-  '抽SSR',
-  '地平线天下第一',
-  '血源天下第一',
-  'CSGO天下第一',
-  'FF15天下第一',
-  '全境封锁天下第一',
-  '辐射天下第一',
-  'MC天下第一',
-  '战神天下第一',
-  'H1Z1天下第一',
-  '高达天下第一',
-  '马里奥天下第一',
-  '神秘海域天下第一',
+// var koko_data=[
+//   '敌羞吾去脱她衣',
+//   '养沼跃鱼',
+//   '传火',
+//   '打昆特牌',
+//   '塞尔达天下第一',
+//   '仁王天下第一',
+//   '救碧琪公主',
+//   'STEAM买买买',
+//   '抽SSR',
+//   '地平线天下第一',
+//   '血源天下第一',
+//   'CSGO天下第一',
+//   'FF15天下第一',
+//   '全境封锁天下第一',
+//   '辐射天下第一',
+//   'MC天下第一',
+//   '战神天下第一',
+//   'H1Z1天下第一',
+//   '高达天下第一',
+//   '马里奥天下第一',
+//   '神秘海域天下第一',
+// ];
+
+var koko_data = [
+  '猪手',
+  '鸭脖',
+  '火锅',
+  '薯片',
 ];
+
+var p = [
+  '跟糖果拍照片',
+  '给糖果吃小零食',
+  '玩switch游戏',
+  '看电影',
+]
 
 var yes_arr = new Array();
 var no_arr = new Array();
@@ -577,8 +591,8 @@ for (var i=0;i<4;i++)
 {
   var yes_key = week_num + (i * 2);
   var no_key = yes_key -1;
- yes_arr.push(koko_data[yes_key]);
- no_arr.push(koko_data[no_key]);
+ yes_arr.push(koko_data[i]);
+ no_arr.push(p[i]);
 }
 
 console.log(week_num);
@@ -593,7 +607,8 @@ console.log(week_num);
 // no_arr.push(koko_data.pop());
 
 //随机星星的数量
-var star =  Math.abs(today.getDay() - 8 );
+// var star =  Math.abs(today.getDay() - 8 );
+var star =  5;
 var star_arr = new  Array();
 for (var i=0;i<star;i++)
 {
@@ -605,7 +620,7 @@ console.log(star)
 Page({
   onShareAppMessage: function () {
     return {
-      title: '玩家老黄历',
+      title: '憨憨老黄历(七夕特别版)',
       path: '/pages/index/index',
       success: function(res) {
         // 分享成功
@@ -632,7 +647,7 @@ Page({
   },
   onLoad: function () {
     wx.setNavigationBarTitle({
-  title: '玩家老黄历'
+  title: '憨憨老黄历(七夕特别版)'
 })
   var lunar = calendar_js.solar2lunar();
   
